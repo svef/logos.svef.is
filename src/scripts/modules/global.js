@@ -1,5 +1,3 @@
-// import { each } from 'lodash'
-
 class Global {
   constructor() {
     this._id = 'svef'
@@ -12,16 +10,10 @@ class Global {
 
       const attribute = this._html.attributes[key]
 
-      if (attribute.name.indexOf(`${this._id}-`) === 0) {
+      if (attribute.name && attribute.name.indexOf(`${this._id}-`) === 0) {
         this.setAttr(attribute.name.split(`${this._id}-`).pop(), attribute.value)
       }
     }
-
-    // each(this._html.attributes, (attribute) => {
-    //   if (attribute.name.indexOf(`${this._id}-`) === 0) {
-    //     this.setAttr(attribute.name.split(`${this._id}-`).pop(), attribute.value)
-    //   }
-    // })
   }
 
   setAttr(_key, _value) {
