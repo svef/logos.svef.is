@@ -1,0 +1,21 @@
+doctype html
+
+html(svef-site='svef' svef-intro='0')
+  include _head
+
+  body
+    main
+      block header
+        include _header
+
+      .inner
+        block content
+      .block.svef
+      .block.awards
+      .block.conf
+
+    block footer
+      include _footer
+
+    block javascript
+      script(src='/scripts/main.js')

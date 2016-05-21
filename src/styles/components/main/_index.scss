@@ -1,0 +1,101 @@
+
+main {
+  overflow: hidden;
+
+  position: relative;
+  z-index: 1;
+
+  margin: 0 auto;
+  padding: 0 0;
+
+  height: 100vh;
+
+  color: $color-gray;
+
+  transition: opacity, transform, background;
+  transition-duration: 2s;
+
+  background: $color-gray;
+
+  .hidden-inner {
+    display: none !important;
+  }
+
+  > .inner{
+    position: relative;
+    z-index: 1;
+
+    padding: 0;
+    height: 100%;
+
+    opacity: 1;
+    transform: translate3d(0,0,0);
+    transition: opacity 500ms, transform 750ms;
+    transition-delay: 1s;
+
+    grid {
+      text-align: left;
+    }
+
+    html[svef-last] & {
+      transition-delay: 0ms;
+    }
+
+    html[svef-navigating="true"] &,
+    .loading & {
+      opacity: 0;
+      transform: translate3d(0,20px,0);
+      transition: opacity 250ms, transform 500ms;
+    }
+
+    @include respond-to(medium) {
+      padding: 0 $spacing*2;
+    }
+  }
+
+  .block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+
+    display: block;
+    margin: auto;
+    padding: 0;
+    height: (100vmin/3);
+
+    background: $color-gray;
+
+    opacity: 0;
+    transition: opacity, transform;
+    transition-duration: 1s;
+    transform: translate3d(0,0,0);
+
+    &.svef {
+      background: $color-svef;
+      transform: translate3d(0, -100%, 0);
+    }
+
+    &.awards {
+      background: $color-awards;
+      transform: translate3d(0, 0, 0);
+    }
+
+    &.conf {
+      background: $color-conf;
+      transform: translate3d(0, 100%, 0)
+    }
+
+    html[svef-intro='9'] & {
+      opacity: 1;
+    }
+  }
+
+  html[svef-intro='10'] &,
+  html[svef-intro='9'] &,
+  html[svef-intro='8'] & {
+    background: $color-gray-light;
+  }
+}

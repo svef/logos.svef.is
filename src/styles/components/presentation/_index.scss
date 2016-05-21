@@ -1,0 +1,367 @@
+
+.intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+
+  margin: auto;
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    margin: auto;
+    width: auto;
+    height: (100vmin/3);
+  }
+
+  svg[class^='svg-type-'] {
+    stroke: transparent;
+    fill: transparent;
+    stroke-width: 4px;
+
+    &, path {
+      transition: transform, fill, stroke, stroke-width;
+      transition-duration: 1s;
+    }
+
+    &.svg-type-svef {
+      z-index: 3;
+      transform: translate3d(-20px, -100%, 0);
+    }
+
+    &.svg-type-awards {
+      z-index: 2;
+      transform: translate3d(-20px, 0, 0);
+    }
+    &.svg-type-conf {
+      z-index: 1;
+      transform: translate3d(-20px, 100%, 0);
+    }
+
+    html[svef-intro='10'] &,
+    html[svef-intro='9'] &,
+    html[svef-intro='8'] &,
+    html[svef-intro='7'] &,
+    html[svef-intro='6'] &,
+    html[svef-intro='5'] &,
+    html[svef-intro='4'] &,
+    html[svef-intro='3'] &,
+    html[svef-intro='2'] &,
+    html[svef-intro='1'] & {}
+
+    html[svef-intro='10'] &,
+    html[svef-intro='9'] &,
+    html[svef-intro='8'] &,
+    html[svef-intro='7'] & {
+      &.svg-type-svef {
+        transform: translate3d(0, -100%, 0);
+        .title-1, .title-2 {
+          fill: $color-svef;
+        }
+      }
+      &.svg-type-awards {
+        transform: translate3d(0, 0, 0);
+        .title-1, .title-2 {
+          fill: $color-awards;
+        }
+      }
+      &.svg-type-conf {
+        transform: translate3d(0, 100%, 0);
+        .title-1, .title-2, .title-2017 {
+          fill: $color-conf;
+        }
+      }
+    }
+
+    html[svef-intro='10'] &,
+    html[svef-intro='9'] & {
+      &.svg-type-svef {
+        transform: translate3d(0, -100%, 0);
+        .title-1, .title-2 {
+          fill: $color-gray-light;
+        }
+      }
+
+      &.svg-type-awards {
+        transform: translate3d(0, 0, 0);
+        .title-1, .title-2 {
+          fill: $color-gray-light;
+        }
+      }
+      &.svg-type-conf {
+        transform: translate3d(0, 100%, 0);
+        .title-1, .title-2 {
+          fill: $color-gray-light;
+        }
+        .title-2017 {
+          fill: $color-gray-light;
+        }
+      }
+    }
+
+    html[svef-intro='10'] & {
+      &.svg-type-svef {
+        transform: translate3d(0, -100%, 0);
+        .title-1, .title-2 {
+          fill: $color-gray;
+        }
+      }
+
+      &.svg-type-awards {
+        transform: translate3d(0, 0, 0);
+        .title-1, .title-2 {
+          fill: $color-gray;
+        }
+      }
+      &.svg-type-conf {
+        transform: translate3d(0, 100%, 0);
+        .title-1, .title-2 {
+          fill: $color-gray;
+        }
+        .title-2017 {
+          fill: $color-conf;
+        }
+      }
+    }
+  }
+
+  svg[class^='svg-hexagon-'] {
+    fill: $color-gray;
+    stroke-width: 4px;
+
+    transition: transform, fill, stroke, stroke-width;
+    transition-duration: 750ms;
+
+    .logo-graphic {
+      opacity: 1;
+      transition: fill 750ms;
+
+      stroke: transparent;
+      fill: transparent;
+    }
+
+    &.svg-hexagon-svef {
+      z-index: 6;
+    }
+
+    &.svg-hexagon-awards {
+      z-index: 5;
+      transform: rotate(60deg);
+    }
+    &.svg-hexagon-conf {
+      z-index: 4;
+      transform: rotate(-120deg);
+    }
+
+    &,
+    html[svef-intro='0'] & {
+      &.svg-hexagon-svef {
+        transform: rotate(-180deg);
+        stroke-width: 0px;
+      }
+    }
+
+    html[svef-intro='10'] &,
+    html[svef-intro='9'] &,
+    html[svef-intro='8'] &,
+    html[svef-intro='7'] &,
+    html[svef-intro='6'] &,
+    html[svef-intro='5'] &,
+    html[svef-intro='4'] &,
+    html[svef-intro='3'] &,
+    html[svef-intro='2'] &,
+    html[svef-intro='1'] & {
+      &.svg-hexagon-svef {
+        transform: rotate(-120deg);
+        stroke: $color-svef;
+        stroke-width: 1px;
+      }
+    }
+
+    html[svef-intro='10'] &,
+    html[svef-intro='9'] &,
+    html[svef-intro='8'] &,
+    html[svef-intro='7'] &,
+    html[svef-intro='6'] &,
+    html[svef-intro='5'] &,
+    html[svef-intro='4'] &,
+    html[svef-intro='3'] &,
+    html[svef-intro='2'] & {
+      &.svg-hexagon-svef {
+        transform: rotate(-60deg);
+        stroke: $color-awards;
+        stroke-width: 2px;
+      }
+    }
+
+    html[svef-intro='10'] &,
+    html[svef-intro='9'] &,
+    html[svef-intro='8'] &,
+    html[svef-intro='7'] &,
+    html[svef-intro='6'] &,
+    html[svef-intro='5'] &,
+    html[svef-intro='4'] &,
+    html[svef-intro='3'] & {
+      &.svg-hexagon-svef {
+        transform: rotate(0deg);
+        stroke: $color-conf;
+        stroke-width: 3px;
+      }
+    }
+
+    html[svef-intro='10'] &,
+    html[svef-intro='9'] &,
+    html[svef-intro='8'] &,
+    html[svef-intro='7'] &,
+    html[svef-intro='6'] &,
+    html[svef-intro='5'] &,
+    html[svef-intro='4'] & {
+      &.svg-hexagon-svef {
+        transform: rotate(60deg);
+        stroke: $color-svef;
+        stroke-width: 4px;
+      }
+    }
+
+    html[svef-intro='10'] &,
+    html[svef-intro='9'] &,
+    html[svef-intro='8'] &,
+    html[svef-intro='7'] &,
+    html[svef-intro='6'] &,
+    html[svef-intro='5'] & {
+      transition-duration: 2s;
+
+      &.svg-hexagon-svef {
+        transform: rotate(0deg) translate3d(-100%, 0, 0);
+
+        .logo-graphic {
+          fill: $color-svef;
+        }
+      }
+      &.svg-hexagon-awards {
+        stroke: $color-awards;
+        stroke-width: 4px;
+
+        transform: rotate(0deg);
+
+        .logo-graphic {
+          fill: $color-awards;
+        }
+      }
+      &.svg-hexagon-conf {
+        stroke: $color-conf;
+        stroke-width: 4px;
+        transform: rotate(0deg) translate3d(100%, 0, 0);
+
+        .logo-graphic {
+          fill: $color-conf;
+        }
+      }
+    }
+
+    html[svef-intro='10'] &,
+    html[svef-intro='9'] &,
+    html[svef-intro='8'] &,
+    html[svef-intro='7'] &,
+    html[svef-intro='6'] & {
+      &.svg-hexagon-svef {
+        transform: rotate(0deg) translate3d(-80%, -100%, 0);
+
+        .logo-graphic {
+          fill: $color-svef;
+        }
+      }
+      &.svg-hexagon-awards {
+        stroke: $color-awards;
+        stroke-width: 4px;
+
+        transform: rotate(0deg) translate3d(-80%,0,0);
+
+        .logo-graphic {
+          fill: $color-awards;
+        }
+      }
+      &.svg-hexagon-conf {
+        stroke: $color-conf;
+        stroke-width: 4px;
+        transform: rotate(0deg) translate3d(-80%, 100%, 0);
+
+        .logo-graphic {
+          fill: $color-conf;
+        }
+      }
+    }
+
+    html[svef-intro='10'] &,
+    html[svef-intro='9'] &,
+    html[svef-intro='8'] &,
+    html[svef-intro='7'] & {
+      fill: transparent;
+    }
+
+    html[svef-intro='10'] &,
+    html[svef-intro='9'] & {
+      &.svg-hexagon-svef {
+        stroke: $color-gray-light;
+        fill: transparent;
+
+        .logo-graphic {
+          fill: $color-gray-light;
+        }
+      }
+      &.svg-hexagon-awards {
+        stroke: $color-gray-light;
+        fill: transparent;
+
+        .logo-graphic {
+          fill: $color-gray-light;
+        }
+      }
+      &.svg-hexagon-conf {
+        stroke: $color-gray-light;
+        fill: transparent;
+
+        .logo-graphic {
+          fill: $color-gray-light;
+        }
+      }
+    }
+
+    html[svef-intro='10'] & {
+      &.svg-hexagon-svef {
+        stroke: $color-svef;
+        stroke-width: 0px;
+        fill: $color-svef;
+
+        .logo-graphic {
+          fill: $color-gray-light;
+        }
+      }
+      &.svg-hexagon-awards {
+        stroke: $color-awards;
+        stroke-width: 0px;
+        fill: $color-awards;
+
+        .logo-graphic {
+          fill: $color-gray-light;
+        }
+      }
+      &.svg-hexagon-conf {
+        stroke: $color-conf;
+        stroke-width: 0px;
+        fill: $color-conf;
+
+        .logo-graphic {
+          fill: $color-gray-light;
+        }
+      }
+    }
+  }
+}
