@@ -21,4 +21,5 @@ domready(() => {
   setTimeout(() => global.setAttr('intro', '8'), 15000)
   setTimeout(() => global.setAttr('intro', '9'), 19000)
   setTimeout(() => global.setAttr('intro', '10'), 23000)
+  setTimeout(() => global.setAttr('intro', '5'), 27000)
 })
