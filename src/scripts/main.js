@@ -10,7 +10,7 @@ import global from './modules/global'
 analytics('UA-77889324-2')
 // initRouter()
 
-domready(() => {
+const runThroughDemo = () => {
   setTimeout(() => global.setAttr('intro', '1'), 1000)
   setTimeout(() => global.setAttr('intro', '2'), 2000)
   setTimeout(() => global.setAttr('intro', '3'), 3000)
@@ -22,4 +22,9 @@ domready(() => {
   setTimeout(() => global.setAttr('intro', '9'), 19000)
   setTimeout(() => global.setAttr('intro', '10'), 23000)
   setTimeout(() => global.setAttr('intro', '5'), 27000)
+  setTimeout(() => runThroughDemo(), 32000)
+}
+
+domready(() => {
+  runThroughDemo()
 })
