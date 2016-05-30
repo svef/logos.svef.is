@@ -4,6 +4,8 @@ const config = require('../config')
 gulp.task('copy',
   () => gulp.src([
     `${config.source}/**/*.html`,
+    `${config.source}/**/*.txt`,
+    `${config.source}/**/*.zip`,
     `${config.source}/CNAME`,
     `${config.source}/favicon.*`,
     `${config.source}/fonts/**`,

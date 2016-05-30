@@ -14,8 +14,9 @@ gulp.task('watch', ['build'], () => {
   ], () => gulp.start('scripts'))
 
   watch([
-    `${config.source}/*.html`,
-    `${config.source}/*.txt`,
+    `${config.source}/**/*.html`,
+    `${config.source}/**/*.txt`,
+    `${config.source}/**/*.zip`,
     `${config.source}/images/**/*.{png,gif,jpg,jpeg,svg}`,
     `${config.source}/fonts/**/*`,
     `${config.source}/data/**/*`,
