@@ -1,6 +1,10 @@
 doctype html
 
-html(svef-site='svef' svef-intro='0')
+block vars
+  - var intro = 0
+  - var demo = 'true'
+
+html(svef-site='svef' svef-intro=intro svef-demo=demo)
   include _head
 
   body

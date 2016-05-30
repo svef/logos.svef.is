@@ -26,5 +26,9 @@ const runThroughDemo = () => {
 }
 
 domready(() => {
-  runThroughDemo()
+  if (global.getAttr('demo')) {
+    runThroughDemo()
+  } else {
+    global.setAttr('intro', '5')
+  }
 })
