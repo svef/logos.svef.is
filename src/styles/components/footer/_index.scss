@@ -19,11 +19,12 @@ footer {
   transition: transform 500ms ease 750ms;
   transform: translate3d(0,100%,0);
 
-  background: $color-gray-light;
+  // background: $color-gray-light;
+  color: $color-gray;
 
   @include respond-to(medium) {
     position: fixed;
-    background: transparent;
+    // background: transparent;
   }
 
   &:after {
@@ -37,14 +38,23 @@ footer {
     width: 200%;
     height: 100%;
 
-    background: $color-gray;
+    background: $color-gray-light;
 
     transition: transform 1500ms ease 750ms;
     transform-origin: top right;
     transform: rotate(-5deg);
   }
 
-  html[svef-intro='10'] & {
+  html[svef-intro='10'] &,
+  html[svef-intro='9'] &,
+  html[svef-intro='8'] &,
+  html[svef-intro='7'] &,
+  html[svef-intro='6'] &,
+  html[svef-intro='5'] &,
+  html[svef-intro='4'] &,
+  html[svef-intro='3'] &,
+  html[svef-intro='2'] &,
+  html[svef-intro='1'] & {
     transform: translate3d(0,0,0);
 
     &:after {
@@ -65,7 +75,16 @@ footer {
     transition: opacity 500ms, transform 750ms;
     transition-delay: 1s;
 
-    html[svef-intro='10'] & {
+    html[svef-intro='10'] &,
+    html[svef-intro='9'] &,
+    html[svef-intro='8'] &,
+    html[svef-intro='7'] &,
+    html[svef-intro='6'] &,
+    html[svef-intro='5'] &,
+    html[svef-intro='4'] &,
+    html[svef-intro='3'] &,
+    html[svef-intro='2'] &,
+    html[svef-intro='1'] & {
       opacity: 1;
       transform: translate3d(0,-50%,0);
     }
@@ -74,6 +93,8 @@ footer {
   .inner {
     display: block;
     text-align: right;
+
+    font-size: 14px;
 
     span {
       display: inline-block;
@@ -84,19 +105,19 @@ footer {
     }
   }
 
-  html[svef-site='svef'] & {
-    &:after {
-      background: $color-svef;
-    }
-  }
-  html[svef-site='awards'] & {
-    &:after {
-      background: $color-awards;
-    }
-  }
-  html[svef-site='conf'] & {
-    &:after {
-      background: $color-conf;
-    }
-  }
+  // html[svef-site='svef'] & {
+  //   &:after {
+  //     background: $color-svef;
+  //   }
+  // }
+  // html[svef-site='awards'] & {
+  //   &:after {
+  //     background: $color-awards;
+  //   }
+  // }
+  // html[svef-site='conf'] & {
+  //   &:after {
+  //     background: $color-conf;
+  //   }
+  // }
 }

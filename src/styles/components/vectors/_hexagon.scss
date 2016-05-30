@@ -6,4 +6,88 @@
   fill: transparent;
   stroke: transparent;
   stroke-width: 2px;
+
+  &-svef {
+    &.link {
+      path {
+        transition: fill 500ms, stroke 500ms;
+      }
+      .hexagon {
+        fill: rgba($color-svef, 0);
+        stroke: rgba($color-svef, 1);
+        stroke-width: 4px;
+
+      }
+      .logo-graphic {
+        fill: rgba($color-svef, 1);
+      }
+      a:hover {
+
+        .hexagon {
+          fill: rgba($color-svef, 1) !important;
+          stroke: rgba($color-svef, 0) !important;
+        }
+
+        .logo-graphic {
+          fill: rgba($color-gray-light, 1) !important;
+        }
+      }
+    }
+  }
+
+  &-awards {
+    &.link {
+      path {
+        transition: fill 500ms, stroke 500ms;
+      }
+      .hexagon {
+        fill: rgba($color-awards, 0);
+        stroke: rgba($color-awards, 1);
+        stroke-width: 4px;
+
+      }
+      .logo-graphic {
+        fill: rgba($color-awards, 1);
+      }
+      a:hover {
+
+        .hexagon {
+          fill: rgba($color-awards, 1) !important;
+          stroke: rgba($color-awards, 0) !important;
+        }
+
+        .logo-graphic {
+          fill: rgba($color-gray-light, 1) !important;
+        }
+      }
+    }
+  }
+
+  &-conf {
+    &.link {
+      path {
+        transition: fill 500ms, stroke 500ms;
+      }
+      .hexagon {
+        fill: rgba($color-conf, 0);
+        stroke: rgba($color-conf, 1);
+        stroke-width: 4px;
+
+      }
+      .logo-graphic {
+        fill: rgba($color-conf, 1);
+      }
+      a:hover {
+
+        .hexagon {
+          fill: rgba($color-conf, 1) !important;
+          stroke: rgba($color-conf, 0) !important;
+        }
+
+        .logo-graphic {
+          fill: rgba($color-gray-light, 1) !important;
+        }
+      }
+    }
+  }
 }

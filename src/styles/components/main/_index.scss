@@ -8,7 +8,7 @@ main {
   margin: 0 auto;
   padding: 0 0;
 
-  height: 100vh;
+  height: calc(100vh - #{$footer-height});
 
   color: $color-gray;
 
@@ -92,10 +92,12 @@ main {
       opacity: 1;
     }
   }
+}
 
-  html[svef-intro='10'] &,
-  html[svef-intro='9'] &,
-  html[svef-intro='8'] & {
+html[svef-intro='10'],
+html[svef-intro='9'],
+html[svef-intro='8'] {
+  body, main {
     background: $color-gray-light;
   }
 }

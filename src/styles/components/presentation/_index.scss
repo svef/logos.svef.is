@@ -18,7 +18,7 @@
 
     margin: auto;
     width: auto;
-    height: (100vmin/3);
+    height: calc(#{100vmin/3} - #{$footer-height});
   }
 
   svg[class^='svg-type-'] {
